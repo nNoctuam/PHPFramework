@@ -1,7 +1,8 @@
 <?php
-include BD.php;
+include 'BD.php';
 connection();
-
+include "/controller/functions.php;"
+load('top');
 echo 'Hello World!!<br>';
 
 
@@ -16,5 +17,5 @@ if (file_exists($site_dir . '/' . $URL[1]))
 
 if (file_exists($site_dir . '/' . $URL[1] . '.php'))
   include $site_dir . '/' . $URL[1] . '.php'; // site.ru/file
-  
+ load('footer');
 close();
