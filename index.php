@@ -6,8 +6,10 @@ $URL = explode('/', $_SERVER['REQUEST_URI']);
 function load_view($name) {
   require_once(SITE_DIR . '/view/' . $name . '.php');
 }
-
-include 'BD.php';
+function load_BD($name) {
+  require_once(SITE_DIR . '/lib/' . $name . '.php');
+}
+load_BD ('BD');
 //connection();
 
 load_view('top');
