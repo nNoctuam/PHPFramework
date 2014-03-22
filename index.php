@@ -1,9 +1,14 @@
 <?php
-global $data;
+global $DATA; // для объявления в глобальной области видимости
+// подключение контроллера находится в этой же области видимости,
+// доп. действий не нужно. А вот вид подключается внутри функции.
+// Там нужно еще раз указать global для импорта
+$DATA = array();
 define('SITE_DIR', __DIR__);
 $URL = explode('/', $_SERVER['REQUEST_URI']);
 
 function load_view($name) {
+  global $DATA; // для импорта из глобальной области видимсоти внутрь этой
   require_once(SITE_DIR . '/view/' . $name . '.php');
 }
 function load_BD($name) {
