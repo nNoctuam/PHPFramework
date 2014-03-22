@@ -1,5 +1,5 @@
 <?php
-
+global $data;
 define('SITE_DIR', __DIR__);
 $URL = explode('/', $_SERVER['REQUEST_URI']);
 
