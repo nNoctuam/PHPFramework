@@ -11,11 +11,11 @@ function load_view($name) {
   global $DATA; // для импорта из глобальной области видимсоти внутрь этой
   require_once(SITE_DIR . '/view/' . $name . '.php');
 }
-function load_BD($name) {
+function load_lib($name) {// почему load_BD? Сразу для всех библиотек
   require_once(SITE_DIR . '/lib/' . $name . '.php');
 }
-load_BD ('BD');
-//connection();
+load_lib('DB');
+DB::connect(); // и никаких параметров, все уже в классе
 
 load_view('top');
 
@@ -33,4 +33,4 @@ if (file_exists(SITE_DIR . '/view/' . $URL[1] . '.php'))
 
 
 load_view('footer');
-//close();
+DB::disconnect();
