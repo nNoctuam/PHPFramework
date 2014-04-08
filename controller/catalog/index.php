@@ -1,0 +1,1 @@
+<?phpEcho "<p>\controller\catalog\index.php</p>";?>

@@ -1,5 +1,9 @@
 <?php
-
+class BD {
+public $location;
+public $user;
+public $passwd;
+public $name;
 function connection( $location= "localhost",$user= "root",$passwd= "",$name= "life")
 {
   mysql_connect($location,$user,$passwd) or die("Подключение завершилось неудачей!");
@@ -9,4 +13,5 @@ function connection( $location= "localhost",$user= "root",$passwd= "",$name= "li
 function close ()
 {
 mysql_close();
+}
 }
