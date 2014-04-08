@@ -1,1 +1,1 @@
-<?phpEcho "<p>\controller\index.php</p>";?>
+<?phpecho "<p>controller /index.php loaded</p>";$DATA['table'] = DB::get('select * from sotrudniki');
